@@ -12,10 +12,20 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float xInput = Input.GetAxis("xAxis");
-        float zInput = Input.GetAxis("zAxis");
-        float yInput = Input.GetAxis("yAxis");
-        Vector3 movement = new Vector3(xAxis, yAxis, zAxis);
-        
+        Vector3 pos = transform.position
+        public float speed = 20f;
+        if(Input.GetKey(KeyCode.w)){ //I dont know anything about C# but this should do something
+            pos.z += speed * Time.deltaTime;
+        }
+        if(Input.GetKey(KeyCode.s)){
+            pos.z -= speed * Time.deltaTime
+        }
+        if(Input.GetKey(KeyCode.a)){
+            pos.x += speed * Time.deltaTime;
+        }
+        if(Input.Getkey(KeyCode.d)){
+            pos.x -= speed * Time.deltaTime;
+        }
+        transform.position = pos;
     }
 }

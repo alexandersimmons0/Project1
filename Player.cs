@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
         if(Input.Getkey(KeyCode.d)){
             pos.x -= speed * Time.deltaTime;
         }
+        // either KeyCode.w or Input.GetKey("W") not sure yet
         transform.position = pos;
     }
 }
